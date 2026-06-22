@@ -13,6 +13,12 @@ console.log(word.length);
 const fruit = "Banaan";
 const vegetable = "Aardappel";
 
+if( fruit.length > vegetable.length ){
+    console.log( fruit.length > vegetable.length);
+}else {
+    console.log( fruit + " " + fruit.length + " is not langer dan " + vegetable + " " + vegetable.length + " vegetables" );
+}
+
 
 
 /* Opdracht 2 */
@@ -20,6 +26,8 @@ const vegetable = "Aardappel";
 //  Tip: bedenk 1 manier die voor beide woorden zou werken.
 // ---- Verwachte uitkomst voor fruit: "n"
 // ---- Verwachte uitkomst voor vegetable: "l"
+console.log( fruit[fruit.length - 1]);
+console.log( vegetable[vegetable.length - 1]);
 
 
 
@@ -28,7 +36,7 @@ const vegetable = "Aardappel";
 // ---- Verwachte uitkomst: "De kat krabt de krullen van de trap"
 
 const userInput = "  De kat krabt de krullen van de trap ";
-
+console.log(userInput.trim());
 
 
 /* Opdracht 4 */
@@ -38,10 +46,12 @@ const userInput = "  De kat krabt de krullen van de trap ";
 const story = "We vinden de behaalde resultaten werkelijk prachtig. Fantastisch, nietwaar?"
 
 
+console.log(story.includes("Fantastisch"));
 
 /* Opdracht 5 */
 // Knip de vraag van bovenstaande tekst (story) af, zodat alleen het eerste gedeelte overblijft en log dit in de terminal.
 // ---- Verwachte uitkomst: "We vinden de behaalde resultaten werkelijk prachtig."
+console.log(story.slice(0, story.indexOf(" Fantastisch")));
 
 
 
@@ -54,7 +64,11 @@ const story = "We vinden de behaalde resultaten werkelijk prachtig. Fantastisch,
 
 const price = "$35.59";
 
+const dutchPrice = price
+    .replace("$", "€")
+    .replace(".", ",");
 
+console.log(dutchPrice);
 
 
 
